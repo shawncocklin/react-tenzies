@@ -64,28 +64,32 @@ select {
 :root {
 
   /* colors */
-  --clr-body: #222222;
-  --clr-dark: #000000;
-  --clr-light: #918E9B;
+  --clr-body: #0B2434;
+  --clr-bold-text: #2B283A;
+  --clr-reg-text: #4A4E74;
+  --clr-light: #F5F5F5;
+  --clr-dark: #5035FF;
+  --clr-accent: #59E391;
   --clr-white: #ffffff;
 
   /* fonts */
-  --ff-sans: 'Poppins', sans-serif;
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-semibold: 600;
+  --ff-sans-bold: 'Karla', sans-serif;
+  --ff-sans-reg: 'Inter', sans-serif;
 
-  --fs-100: 11px;
-  --fs-200: 12px;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-200: 13px;
   --fs-400: 16px;
-  --fs-600: 36px;
+  --fs-500: 21px;
+  --fs-600: 26px;
+
+
+  --dice-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  --btn-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
 }
 
 /* utilities */
-
-.fs-100 {
-  font-size: var(--fs-100);
-}
 
 .fs-200 {
   font-size: var(--fs-200);
@@ -99,38 +103,29 @@ select {
   font-size: var(--fs-600);
 }
 
-.fw-semibold {
-  font-weight: var(--fw-semibold);
+.fw-bold {
+  font-weight: var(--fw-bold);
 }
 
-.fw-regular {
-  font-weight: var(--fw-regular);
-}
-
-.text-accent {
-  color: var(--clr-light-accent);
-}
-
-.text-white {
-  color: var(--clr-white);
-}
-
-.text-light {
-  color: var(--clr-light);
-}
-
-.text-dark {
-  color: var(--clr-dark);
+.text-bold {
+  color: var(--text-clr, --clr-bold-text);
+  font-weight: var(--fw-bold);
 }
 
 .bg-primary {
-  color: var(--clr-white);
+  background-color: var(--clr-light);
 }
 
-.container {
-  padding-inline: 36px;
-  margin-inline: auto;
-  max-width: var(--width, 550px);
+.bg-white {
+  background-color: var(--clr-white);
+}
+
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
+.bg-dark {
+  background-color: var(--clr-dark);
 }
 
 .flow > *:where(:not(:first-child))  {
@@ -147,10 +142,13 @@ select {
 }
 
 body {
-  font-family: var(--ff-sans);
-  font-weight: var(--fw-light); 
-  color: var(--clr-body); 
-  background-color: var(--clr-white);
+  font-family: var(--ff-sans-reg);
+  color: var(--clr-reg-text);
+  background-color: var(--clr-body);
+}
+
+section {
+  padding-inline: 2rem;
 }
 
 
